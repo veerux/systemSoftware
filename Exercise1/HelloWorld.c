@@ -9,6 +9,8 @@ Description:  Printing Hello World
 int main () {
 
   printf("Hello World!\n");
+  printf("How are you today?\n");
+
   return 0;
 
 }

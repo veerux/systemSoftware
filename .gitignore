@@ -13,15 +13,12 @@
 *.docx
 *.pdf
 
-# Add all other file types you want to ignore!!
 
 # Ignore all executables:
 
 /Exercise1/HelloWorld
 /Exercise2/Exercise2
 
-# Remember to add here also the upcoming exercise executables, up to exercise 10
 
-# REMOVE THE HINTS
 
 
