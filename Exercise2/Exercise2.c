@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 int main()
 {
@@ -43,6 +44,20 @@ int main()
   printf("%i to the power of %i is %i\n", first, second, powerOf);
 
 
+  // TASK 4
 
-  printf("%i \n", rand() % 100 );
+  srand(time(0));
+
+  int number = rand() % 100 + 1;
+  printf("%i \n", number);
+
+  if (number % 2 == 0)
+  {
+    printf("This number is even.\n");
+  }
+  else
+  {
+    printf("This number is odd.\n");
+  }
+
 }
