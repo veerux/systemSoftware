@@ -5,6 +5,8 @@
 
 int main()
 {
+  // TASK 3
+
   int first;
   int second;
   printf("Give two integers:\n");
@@ -59,5 +61,11 @@ int main()
   {
     printf("This number is odd.\n");
   }
+
+  if (number % 3 == 0 && number % 8 == 0)
+  {
+    printf("%i is divisible by both 3 and 8!\n", number)
+  }
+
 
 }
