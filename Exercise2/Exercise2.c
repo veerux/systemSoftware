@@ -43,4 +43,6 @@ int main()
   printf("%i to the power of %i is %i\n", first, second, powerOf);
 
 
+
+  printf("%i \n", rand() % 100 );
 }
