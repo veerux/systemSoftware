@@ -1,3 +1,10 @@
+/*
+File:         Exercise3.c
+Author:       Veera Määttänen
+Description:  Sum of numbers and sum of even numbers in given range.
+              Creating a random int 2-20 and multiplying itself.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -40,10 +47,9 @@ int multiplyInt(int i)
   // To prevent large numbers multiplying and causing overflow
   // the program takes a squareroot and compares it to the variable i
 
-  double maxValue = 2147483647;
-  printf("The maximum value for integer is %.0f\n", maxValue);
+  printf("The maximum value for integer is 2147483647\n");
+  double maxValue = sqrt((double)2147483647);
 
-  maxValue = sqrt(maxValue);
   int squareroot = maxValue;
   while (squareroot > i)
   {
