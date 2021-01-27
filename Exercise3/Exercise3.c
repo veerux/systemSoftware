@@ -78,16 +78,42 @@ bool fibonacciCalc(int random)
   return 0;
 }
 
+int collatzSeq(int num)
+{
+  int count = 1;
+  printf("Collazt sequence for %i is: ", num);
+  if (num != 0)
+  {
+    while (num != 1)
+    {
+      if (num % 2 == 0)
+      {
+        printf("%i - ", num);
+        num = num / 2;
+        count ++;
+      }
+      else
+      {
+        printf("%i - ", num);
+        num = num * 3 + 1;
+        count++;
+      }
+    }
+  }
+  printf("%i\n", num);
+  printf("Length of the sequence is: %i\n", count);
+  return 1;
+}
 
 
 int main()
 {
-  //printf("Sum of numbers 1-100 is %i\n", sumOfNumbers(100));
-  //printf("Sum of even numbers between 1-1000 is %i\n", sumOfEven(1000));
-  //printf("The size of an integer in bytes is %lu\n", sizeof(int));
-  int randomNumber = randomInt(20,0);
+  printf("Sum of numbers 1-100 is %i\n", sumOfNumbers(100));
+  printf("Sum of even numbers between 1-1000 is %i\n", sumOfEven(1000));
+  printf("The size of an integer in bytes is %lu\n", sizeof(int));
+  int randomNumber = randomInt(100,0);
   printf("Random number generated is %i\n", randomNumber);
-  //printf("The multiplication stopped on number %i\n", multiplyInt(randomNumber));
+  printf("The multiplication stopped on number %i\n", multiplyInt(randomNumber));
 
   if (fibonacciCalc(randomNumber))
   {
@@ -97,4 +123,7 @@ int main()
   {
     printf("The number %i doesn't belong to Fibonacci series.\n", randomNumber);
   }
+
+  collatzSeq(randomNumber);
+
 }
