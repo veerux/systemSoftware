@@ -9,6 +9,7 @@ Description:  Sum of numbers and sum of even numbers in given range.
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <stdbool.h>
 
 int sumOfNumbers (int n)
 {
@@ -33,10 +34,10 @@ int sumOfEven (int n)
   return sum;
 }
 
-int randomInt()
+int randomInt(int max, int min)
 {
   srand(time(NULL)); // program will pick a new integer each time
-  int r = rand() % (21 - 2) + 2;
+  int r = rand() % (max - min) + min;
   return r;
 }
 
@@ -58,12 +59,42 @@ int multiplyInt(int i)
   return i;
 }
 
+bool fibonacciCalc(int random)
+{
+  int first = 0;
+  int second = 1;
+  int result = 0;
+
+  while (first + second < 100000)
+  {
+    if (random == result)
+    {
+      return 1;
+    }
+    result = first + second;
+    first = second;
+    second = result;
+  }
+  return 0;
+}
+
+
+
 int main()
 {
-  printf("Sum of numbers 1-100 is %i\n", sumOfNumbers(100));
-  printf("Sum of even numbers between 1-1000 is %i\n", sumOfEven(1000));
-  printf("The size of an integer in bytes is %lu\n", sizeof(int));
-  int randomNumber = randomInt();
+  //printf("Sum of numbers 1-100 is %i\n", sumOfNumbers(100));
+  //printf("Sum of even numbers between 1-1000 is %i\n", sumOfEven(1000));
+  //printf("The size of an integer in bytes is %lu\n", sizeof(int));
+  int randomNumber = randomInt(20,0);
   printf("Random number generated is %i\n", randomNumber);
-  printf("The multiplication stopped on number %i\n", multiplyInt(randomNumber));
+  //printf("The multiplication stopped on number %i\n", multiplyInt(randomNumber));
+
+  if (fibonacciCalc(randomNumber))
+  {
+    printf("The number %i belongs to Fibonacci series!\n", randomNumber);
+  }
+  else
+  {
+    printf("The number %i doesn't belong to Fibonacci series.\n", randomNumber);
+  }
 }
