@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
 
 int sumOfNumbers (int n)
 {
@@ -23,10 +26,38 @@ int sumOfEven (int n)
   return sum;
 }
 
+int randomInt()
+{
+  srand(time(NULL)); // program will pick a new integer each time
+  int r = rand() % (21 - 2) + 2;
+  return r;
+}
+
+int multiplyInt(int i)
+{
+  // Maximum value for int is calculated: pow(128,4) * 8 -1
+  // because the calculation causes overflow, the number is hardcoded.
+  // To prevent large numbers multiplying and causing overflow
+  // the program takes a squareroot and compares it to the variable i
+
+  double maxValue = 2147483647;
+  printf("The maximum value for integer is %.0f\n", maxValue);
+
+  maxValue = sqrt(maxValue);
+  int squareroot = maxValue;
+  while (squareroot > i)
+  {
+    i = i*i;
+  }
+  return i;
+}
 
 int main()
 {
-  printf("%i\n", sumOfNumbers(100));
-  printf("%i\n", sumOfEven(1000));
-
+  printf("Sum of numbers 1-100 is %i\n", sumOfNumbers(100));
+  printf("Sum of even numbers between 1-1000 is %i\n", sumOfEven(1000));
+  printf("The size of an integer in bytes is %lu\n", sizeof(int));
+  int randomNumber = randomInt();
+  printf("Random number generated is %i\n", randomNumber);
+  printf("The multiplication stopped on number %i\n", multiplyInt(randomNumber));
 }
