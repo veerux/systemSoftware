@@ -7,6 +7,7 @@ Author: Veera Määttänen
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 void negativeNums(int input, int *negative);
 void sumOfNums(int input, int *sum);
@@ -44,6 +45,9 @@ int main() {
   int exercise = randomNum(0, 100);
   int exam = randomNum(0, 100);
   grading(exercise, exam);
+  }
+
+
 }
 
 //checking for negative integers
@@ -87,7 +91,8 @@ int randomNum(int first, int second) {
 void grading(int exerPoints, int examPoints) {
   int sum = exerPoints + examPoints;
   if (exerPoints < 50 || examPoints < 50) {
-     printf("You failed the course because you didn't meet the minimum 50 points on each exercises and exam. You got %i points in total.\n", sum);
+     printf("You failed the course because you didn't meet the minimum 50 points on each exercises and exam. "
+            "You got %i points in total.\n", sum);
   }
   else if (sum < 120) {
     printf("You got grade 1 with %i points.\n", sum);
