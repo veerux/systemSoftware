@@ -22,5 +22,11 @@ int main() {
 
   testPrime(arrPointer, 20);
 
+  //next lines are for testing purposes
+  int array2[5] = {-1,-4,4,5,13};
+  int *arrPointer2 = NULL;
+  arrPointer2 = &array2[0];
+  testPrime(arrPointer2, 5);
+
   return 0;
 }
