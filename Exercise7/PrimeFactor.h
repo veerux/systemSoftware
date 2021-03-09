@@ -1,14 +1,12 @@
-/* 
+/*
  * File:   		PrimeFactor.h
- * Author: 
- * Description: 
+ * Author:    Veera Määttänen
+ * Description: Prototypes for PrimeFactor.c
  */
 
 #ifndef PRIMEFACTOR_H
 #define PRIMEFACTOR_H
 
-// Test function prototype, remove the test and add your functions' prototypes here.
-void testPrime();
+void testPrime(int *arrPointer, int size);
 
 #endif /* PRIMEFACTOR_H */
-

@@ -5,7 +5,6 @@
  */
 
 #include <stdio.h>
-
 #include "Armstrong.h"
 #include "PrimeFactor.h"
 
@@ -20,5 +19,8 @@ int main() {
     printf("%d ", *(arrPointer + i));
   }
   printf("\n");
+
+  testPrime(arrPointer, 20);
+
   return 0;
 }

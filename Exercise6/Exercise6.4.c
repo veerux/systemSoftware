@@ -1,6 +1,6 @@
 /*
 Exercise 6, task 4
-Description:
+Description: Printing a 2d array of ADC and celcius values.
 Author:      Veera Määttänen
 */
 
@@ -32,4 +32,6 @@ int main() {
     printf("%.0f\t ", array[i][0]);
     printf("%.1f\n", array[i][1]);
   }
+
+  return 0;
 }

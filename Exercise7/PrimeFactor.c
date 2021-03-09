@@ -1,19 +1,24 @@
-/* 
+/*
  * File:   		PrimeFactor.c
- * Author: 		
- * Description: 
+ * Author: 		Veera Määttänen
+ * Description: Printing out the prime factors for each integer in the array.
  */
 
 #include <stdio.h>
+#include <math.h>
 #include "PrimeFactor.h"
 
-// REMEMBER TO HAVE ALL FUNCTION PROTOTYPES IN THE HEADER FILE (.h)
-// ALL IMPLEMENTATION CODE (= FUNCTION IMPLEMENTATION) SHALL BE IN .c file.
-// REMOVE THESE HINTS IN YOUR FINAL VERSION.
 
-// Test function implementation, remove and code your functions here.
-void testPrime() {
 
-	printf("Hello from PrimeFactor.\n");
-
+void testPrime(int *arrPointer, int size) {
+	//looping through the array
+	for (int i = 0; i < size; i++) {
+		for (int i = 2; i < *arrPointer; i++) {
+			if (*arrPointer % i == 0) {
+				printf("it is not prime");
+			}
+			printf("It is prime");
+		}
+		arrPointer += 1;
+	}
 }
