@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -std=c11
 default: Exercise8
 
 Exercise8: Exercise8.o Array.o Finder.o Calculation.o
-	$(CC) $(CFLAGS) -o Exercise8 Exercise8.o Array.o Finder.o Calculation.o-lm
+	$(CC) $(CFLAGS) -o Exercise8 Exercise8.o Array.o Finder.o Calculation.o 
 
 Exercise8.o: Exercise8.c Array.h Finder.h Calculation.h
 	$(CC) $(CFLAGS) -c Exercise8.c
