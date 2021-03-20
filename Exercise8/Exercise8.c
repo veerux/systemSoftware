@@ -25,7 +25,7 @@ int main(void) {
   createArray(arrPointer, SIZE);
   printArray(arrPointer, SIZE);
   valueFinder(arrPointer, SIZE);
-
   free(arrPointer);
+  fileArray();
   return 0;
 }

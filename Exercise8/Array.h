@@ -9,5 +9,5 @@
 
 void createArray(int *array, int size);
 void printArray(int *array, int size);
-
+int fileArray(void);
 #endif /* ARRAY_H */

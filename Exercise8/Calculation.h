@@ -7,6 +7,6 @@
 #ifndef CALCULATION_H
 #define CALCULATION_H
 
-void testCalculation(void);
+int calculation(int *array, int size);
 
 #endif /* CALCULATION_H */
