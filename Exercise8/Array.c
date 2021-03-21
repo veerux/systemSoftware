@@ -36,7 +36,7 @@ int fileArray(void) {
     return 0;
   }
 
-  filePointer = fopen("tess.txt", "r");
+  filePointer = fopen("Smal.txt", "r");
   if (filePointer == NULL) {
     printf("Error: Couldn't open the file.\n");
     return 0;
@@ -53,8 +53,7 @@ int fileArray(void) {
     printf("Error: The file must have at least 5 integers.\n");
   }
   else {
-    printArray(newArray,size);
-    printf("%i\n", calculation(newArray,size));
+    printf("The greatest sum of five adjacent numbers is: %i\n", calculation(newArray,size));
   }
   free(newArray);
   return 0;
