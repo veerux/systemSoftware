@@ -1,18 +1,30 @@
 /*
  * File:   		Contact.c
  * Author:		Veera Määttänen
- * Description:
+ * Description: Opens a file and reads the text. Changes it according to
+                given key and saves to new file.
  */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <ctype.h>
 
 #include "Cipher.h"
 
 char change(char c, int key);
 
-int toCipher(int key) {
+int toCipher() {
+  int key, temp, status;
+  printf("\n--- PLAINTEXT TO CIPHERTEXT ---\n");
+  printf("Give a key: ");
+  status = scanf("%d", &key);
+	while(status != 1){
+		while((temp=getchar()) != EOF && temp != '\n');
+		printf("Invalid key. Please give an integer: ");
+		status = scanf("%d", &key);
+	}
+
   FILE *filePointer = NULL;
   FILE *fileWriter = NULL;
 

@@ -6,12 +6,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "Cipher.h"
+#include "Vote.h"
 
 int main() {
-  int input;
-  printf("Give a key: ");
-  scanf("%i", &input);
-  toCipher(input);
-
+  toCipher();
+  votingSystem();
+  return 0;
 }

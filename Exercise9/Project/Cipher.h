@@ -7,6 +7,7 @@
 #ifndef CIPHER_H
 #define CIPHER_H
 
-int toCipher(int key);
+int toCipher(void);
+char change(char c, int key);
 
 #endif /* CIPHER_H */
